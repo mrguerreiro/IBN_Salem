@@ -1,59 +1,166 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Quem Somos</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <body>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-            <div class="wrapper">
-                <div class="menu">
-                    <br><img src="LogoCbn.png" width="160">
+    <!-- Segurança -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Quem Somos — IBN Salem</title>
+    <meta name="description" content="Conheça a história da Igreja Batista Nacional Salem de Lençóis Paulista, iniciada em 2010.">
+    <link rel="icon" type="image/png" href="Assets/Imagens/logoSalem.png">
+    <link rel="apple-touch-icon" href="Assets/Imagens/logoSalem.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="Assets/Imagens/logoSalem.png" alt="Logo IBN Salem">
+                <span>IBN Salem
+                    <small>Lençóis Paulista</small>
+                </span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="QuemSomos.html" class="active">Quem somos</a></li>
+                <li><a href="index.html#agenda">Agenda</a></li>
+                <li><a href="index.html#contato">Contatos</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/5514997150351?text=Ol%C3%A1%2C%20gostaria%20de%20um%20pedido%20de%20ora%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Peça oração</a>
+                <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ENXUTO ===================== -->
+        <section class="hero hero-compact">
+            <div class="container hero-inner">
+                <span class="eyebrow"><i class="fas fa-cross"></i> Nossa história</span>
+                <h1>Quem <span class="accent">somos</span></h1>
+                <p>Uma comunidade de fé em Lençóis Paulista, caminhando juntos desde 2010.</p>
+            </div>
+        </section>
+
+        <!-- ===================== SOBRE ===================== -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-media reveal">
+                        <img src="Assets/Imagens/logoSalem.png" alt="Igreja Batista Nacional Salem">
+                    </div>
+
+                    <div class="about-copy reveal">
+                        <h2>Uma igreja Batista, uma família na fé</h2>
+                        <p>Somos uma <strong>igreja Batista filiada à Convenção Batista Nacional</strong>. Cremos em uma fé viva, no cuidado uns com os outros e em servir a nossa cidade com amor.</p>
+                        <p>A Igreja Batista Nacional Salem de Lençóis Paulista teve suas atividades iniciadas em <strong>fevereiro de 2010</strong>, após um período em que os cultos eram realizados na casa da Miss. Célia.</p>
+                        <p>O primeiro templo ficava na <strong>Rua Joaquim M. Contente, 490 — Jd. Maria Luíza I</strong>, onde tudo começou a florescer.</p>
+
+                        <ul class="timeline">
+                            <li>
+                                <strong>Antes de 2010</strong>
+                                <span>Cultos realizados na casa da Miss. Célia.</span>
+                            </li>
+                            <li>
+                                <strong>Fevereiro de 2010</strong>
+                                <span>Início oficial das atividades da igreja.</span>
+                            </li>
+                            <li>
+                                <strong>Primeiro templo</strong>
+                                <span>R. Joaquim M. Contente, 490 — Jd. Maria Luíza I.</span>
+                            </li>
+                            <li>
+                                <strong>Hoje</strong>
+                                <span>Uma comunidade viva, servindo Lençóis Paulista.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="stats reveal">
+                    <div class="stat"><b>2010</b><span>Ano de fundação</span></div>
+                    <div class="stat"><b>+14</b><span>Anos de história</span></div>
+                    <div class="stat"><b>CBN</b><span>Convenção Batista Nacional</span></div>
+                    <div class="stat"><b>1</b><span>Família na fé</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CTA ===================== -->
+        <section class="section">
+            <div class="container">
+                <div class="cta reveal">
+                    <h2>Venha nos visitar</h2>
+                    <p>Você e sua família são muito bem-vindos. Junte-se a nós no próximo culto.</p>
+                    <div class="hero-actions">
+                        <a href="index.html#cultos" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Ver horários</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Jo%C3%A3o+Carneiro+Geraldes,+335,+Jardim+Ubirama,+Len%C3%A7%C3%B3is+Paulista+-+SP" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fas fa-map-location-dot"></i> Como chegar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Assets/Imagens/logoSalem.png" alt="IBN Salem">
+                    <p>Igreja Batista Nacional Salem — Lençóis Paulista/SP. Filiada à Convenção Batista Nacional.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
                     <ul>
-                        <br><br><br><br><br><br>
-                        <li><a href="index.html" class="botao"><strong>Home</strong></a></li><br>
-                        <li><a href="QuemSomos.html" class="botao"><strong>Quem somos</strong></a></li><br>
-                        <li><a href="#" class="botao"><strong>Agenda</strong></a></li><br>
-                        <li><a href="#" class="botao"><strong>Contatos</strong></a></li><br>
-                        <li><a href="#" class="botao"><strong>Pedido de oração</strong></a></li><br>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="QuemSomos.html">Quem somos</a></li>
+                        <li><a href="index.html#agenda">Agenda</a></li>
+                        <li><a href="index.html#oracao">Pedido de oração</a></li>
                     </ul>
                 </div>
-                
-                <div class="main">
-                    <div class="header">
-                        <img src="logoSalem.png" width="310">
-                    </div>
-            
-                    <div class="contentQuemSomos">
-                        <br><br><br><h1>Quem Somos</h1>
-                        <br><br><br><h2>Somos uma igreja Batista filiada a Convenção Batista Nacional.</h2><h2> A igreja Batista Nacional Salem de Lençois Pta teve suas atividades iniciadas em Fevereiro de 2010,
-                            após um periodo tendo os seus cultos realizados na casa da Miss.Célia.
-                            O prédio do primeiro templo ficava na rua  R. Joaquim M. Contente, 490 - Jd. Maria Luíza I.</h2>
-                        </h2>
-                        </video>        
-                    </div>
 
-                    <div class="footer">
-                        <footer>
-                            
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/igrejabatistanacionalsalem" target="_blank"><img src="face-logo.png" width="50" alt="Facebook"></a>
-                                    <a href="https://www.instagram.com/ibnsalemlp?igsh=MTJpZTR1OHhmOXFiYQ==" target="_blank"><img src="instagram-logo.png" width="50" alt="Instagram"></a>
-                                    <a href="https://youtube.com/@igrejabatistanacionalsalem999?si=qN_VUQtjxQHSA8V2" target="_blank"><img src="youtube-logo.png" width="90" alt="YouTube"></a></li>
-                                </li>
-                            </ul>
-                            <br><strong><p>Igreja Batista Nacional Salem 2024  - Todos os direitos reservados &copy;</p></strong>
-                        </footer>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-location-dot"></i> Rua João Carneiro Geraldes, 335 — Jd. Ubirama, Lençóis Paulista/SP</li>
+                        <li><i class="fas fa-clock"></i> Dom 19h · Ter 19h30 · Qui 19h30</li>
+                        <li><a href="https://wa.me/5514997150351" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> (14) 99715-0351</a></li>
+                    </ul>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Jo%C3%A3o+Carneiro+Geraldes,+335,+Jardim+Ubirama,+Len%C3%A7%C3%B3is+Paulista+-+SP" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-map"><i class="fas fa-map-location-dot"></i> Onde estamos</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/igrejabatistanacionalsalem" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ibnsalemlp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@igrejabatistanacionalsalem999" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
-                
-            </div>    
-        </body>
-</html>        
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Igreja Batista Nacional Salem — Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

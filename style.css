@@ -451,6 +451,23 @@ h3 {
     font-size: 1.05rem;
 }
 
+/* Link "Ver no mapa" dos Grupos de Crescimento */
+.card-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--red-500);
+    transition: color 0.2s var(--ease), gap 0.2s var(--ease);
+}
+
+.card-map:hover {
+    color: #ff6b74;
+    gap: 0.7rem;
+}
+
 /* Link de WhatsApp dos pastores */
 .pastor-phone {
     display: inline-flex;

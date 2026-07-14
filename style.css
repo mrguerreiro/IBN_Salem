@@ -451,6 +451,51 @@ h3 {
     font-size: 1.05rem;
 }
 
+/* =========================================================
+   Versículo do dia
+   ========================================================= */
+.verse-card {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3.5rem);
+    border-radius: var(--radius-lg);
+    background: radial-gradient(ellipse at top, rgba(225, 29, 42, 0.28), transparent 60%),
+        linear-gradient(180deg, var(--ink-800), var(--ink-900));
+    border: 1px solid rgba(225, 29, 42, 0.25);
+}
+
+.verse-card .eyebrow {
+    margin-bottom: 1.6rem;
+}
+
+.verse-text {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin-bottom: 1.2rem;
+    transition: opacity 0.4s var(--ease);
+}
+
+.verse-ref {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(120deg, var(--red-500), #ff6b74);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.verse-text.is-loading {
+    opacity: 0.35;
+}
+
 /* Link "Ver no mapa" dos Grupos de Crescimento */
 .card-map {
     display: inline-flex;

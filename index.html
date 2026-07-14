@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Segurança -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self'; connect-src 'self' https://bible-api.com; base-uri 'self'; form-action 'self'; object-src 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <title>IBN Salem — Igreja Batista Nacional Salem</title>
@@ -35,6 +35,7 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="QuemSomos.html">Quem somos</a></li>
                 <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#biblia">Bíblia</a></li>
                 <li><a href="#contato">Contatos</a></li>
             </ul>
 
@@ -58,6 +59,18 @@
                 <div class="hero-actions">
                     <a href="#cultos" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Nossa agenda</a>
                     <a href="QuemSomos.html" class="btn btn-primary">Conheça nossa história</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== VERSÍCULO DO DIA ===================== -->
+        <section class="section" id="biblia">
+            <div class="container">
+                <div class="verse-card reveal">
+                    <span class="eyebrow"><i class="fas fa-book-bible"></i> Versículo do dia</span>
+                    <blockquote class="verse-text" id="verseText">"O Senhor é o meu pastor; nada me faltará."</blockquote>
+                    <cite class="verse-ref" id="verseRef">Salmos 23:1</cite>
+                    <a href="https://www.bible.com/pt" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-book-open"></i> Abrir a Bíblia completa</a>
                 </div>
             </div>
         </section>

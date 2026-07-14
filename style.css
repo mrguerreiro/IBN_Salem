@@ -496,6 +496,19 @@ h3 {
     opacity: 0.35;
 }
 
+.verse-actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.verse-actions .btn.is-playing {
+    background: var(--red-500);
+    color: var(--white);
+    border-color: var(--red-500);
+}
+
 /* Link "Ver no mapa" dos Grupos de Crescimento */
 .card-map {
     display: inline-flex;

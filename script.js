@@ -84,6 +84,65 @@
         const url = "https://bible-api.com/" +
             encodeURIComponent(ref) + "?translation=almeida";
 
+        // Texto/referência atuais, limpos (sem aspas)
+        function currentVerse() {
+            return {
+                text: verseTextEl.textContent.replace(/[“”"]/g, "").trim(),
+                ref: verseRefEl.textContent.trim()
+            };
+        }
+
+        /* --- Botão Ouvir (Web Speech API) --- */
+        const listenBtn = document.getElementById("verseListen");
+        const synth = window.speechSynthesis;
+
+        if (listenBtn && synth && "SpeechSynthesisUtterance" in window) {
+            function resetListenBtn() {
+                listenBtn.classList.remove("is-playing");
+                listenBtn.innerHTML = '<i class="fas fa-volume-high"></i> Ouvir';
+            }
+
+            listenBtn.addEventListener("click", function () {
+                if (synth.speaking) {
+                    synth.cancel();
+                    resetListenBtn();
+                    return;
+                }
+                const v = currentVerse();
+                const utter = new SpeechSynthesisUtterance(v.text + ". " + v.ref);
+                utter.lang = "pt-BR";
+                utter.rate = 0.95;
+                utter.onend = resetListenBtn;
+                utter.onerror = resetListenBtn;
+                synth.speak(utter);
+                listenBtn.classList.add("is-playing");
+                listenBtn.innerHTML = '<i class="fas fa-stop"></i> Parar';
+            });
+
+            // Interrompe a leitura ao sair da página
+            window.addEventListener("beforeunload", function () {
+                synth.cancel();
+            });
+        } else if (listenBtn) {
+            listenBtn.style.display = "none";
+        }
+
+        /* --- Botão Compartilhar (WhatsApp) --- */
+        const shareBtn = document.getElementById("verseShare");
+        if (shareBtn) {
+            shareBtn.addEventListener("click", function () {
+                const v = currentVerse();
+                const pageUrl = location.origin + location.pathname;
+                const msg = "“" + v.text + "” — " + v.ref +
+                    "\n\nIgreja Batista Nacional Salem\n" + pageUrl;
+                window.open(
+                    "https://wa.me/?text=" + encodeURIComponent(msg),
+                    "_blank",
+                    "noopener"
+                );
+            });
+        }
+
         verseTextEl.classList.add("is-loading");
 
         fetch(url)
